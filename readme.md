@@ -13,6 +13,7 @@ Panda链接： git@github.com:mnavaki/FAROS.git
 
     notice：删除之前安装的llvm
         sudo xargs rm < install_manifest.txt
+        //install_manifest.txt在手动安装的llvm build目录下
 
 ### 进行测试
 
