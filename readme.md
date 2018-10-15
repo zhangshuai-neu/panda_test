@@ -2,8 +2,10 @@
 
 Panda链接： git@github.com:mnavaki/FAROS.git
 
-### 安装
 
+### 安装
+	0)安装一下编译器版本，并配置变量
+		CC=gcc-4.8 CXX=g++-4.8
     1）执行 panda/panda_install.bash
         自动处理了一些依赖包
     2）执行 panda/qemu/build.sh
