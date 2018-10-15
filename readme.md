@@ -12,11 +12,7 @@ Panda链接： git@github.com:mnavaki/FAROS.git
     notice：删除之前安装的llvm
         sudo xargs rm < install_manifest.txt
 
-
 ### 进行测试
-准备：
-从该链接下载virto windows二进制驱动
-[virto](https://docs.fedoraproject.org/en-US/quick-docs/creating-windows-virtual-machines-using-virtio-drivers/)
 
 1.创建win7镜像
 
@@ -31,7 +27,7 @@ Panda链接： git@github.com:mnavaki/FAROS.git
 		DISKIMG=./win7_ide.qcow
 
 		qemu-system-x86_64 \
-		-smp 4 \
+	Z	-smp 4 \
 		-m 2048 \
 		-drive file=${DISKIMG},if=ide \
 		--enable-kvm
