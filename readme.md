@@ -27,7 +27,7 @@ Panda链接： git@github.com:mnavaki/FAROS.git
 		DISKIMG=./win7_ide.qcow
 
 		qemu-system-x86_64 \
-	Z	-smp 4 \
+		-smp 4 \
 		-m 2048 \
 		-drive file=${DISKIMG},if=ide \
 		--enable-kvm
