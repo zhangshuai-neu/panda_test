@@ -14,9 +14,30 @@ Panda链接： git@github.com:mnavaki/FAROS.git
 
 
 ### 进行测试
+准备：
+从该链接下载virto windows二进制驱动
+[virto](https://docs.fedoraproject.org/en-US/quick-docs/creating-windows-virtual-machines-using-virtio-drivers/)
 
-    1.创建win7镜像
-    qemu-img create -f qcow -o win7.qcow 16G
+1.创建win7镜像
+
+	win7的硬盘文件：win7_ide.qcow
+	最好使用virtual-box创建并安装，否则使用qemu。。。。超级慢，超级慢
+	在使用virtual-box时，要创建qcow格式的硬盘文件，并且不能使用默认的sata接口，要使用ide接口
+	安装完之后使用如下脚本，即可启动该硬盘文件
+
+    脚本：
+		#!/bin/sh
+		#硬盘镜像所在位置
+		DISKIMG=./win7_ide.qcow
+
+		qemu-system-x86_64 \
+		-smp 4 \
+		-m 2048 \
+		-drive file=${DISKIMG},if=ide \
+		--enable-kvm
+
+2.
+
 
     测试的例子：
     1 Record
